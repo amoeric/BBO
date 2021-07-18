@@ -5,4 +5,6 @@ class Player < ApplicationRecord
   enum play_type: { 'batter'=> 0, 'pittcher'=> 1, 'coach'=> 2 }
 
   has_one :team
+  has_many :player_positions
+  has_many :positions, through: :player_positions
 end
