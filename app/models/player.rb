@@ -7,4 +7,6 @@ class Player < ApplicationRecord
   belongs_to :team
   has_many :player_positions
   has_many :positions, through: :player_positions
+  has_many :ability_players
+  has_many :abilities, through: :ability_players
 end
