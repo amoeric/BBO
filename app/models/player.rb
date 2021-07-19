@@ -4,7 +4,7 @@ class Player < ApplicationRecord
   enum rank: { 'blue'=> 0, 'yellow'=> 1, 'red'=> 2, 'gold'=> 3, 'purple'=> 4, 'black'=> 5 }
   enum play_type: { 'batter'=> 0, 'pittcher'=> 1, 'coach'=> 2 }
 
-  has_one :team
+  belongs_to :team
   has_many :player_positions
   has_many :positions, through: :player_positions
 end
