@@ -9,4 +9,6 @@ class Player < ApplicationRecord
   has_many :positions, through: :player_positions
   has_many :ability_players
   has_many :abilities, through: :ability_players
+
+  validates :name, presence: true, uniqueness: true
 end
